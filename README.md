@@ -34,7 +34,9 @@ existed keeps failing until then (the address is accepted, since
 every tag, purge the cache: open
 `https://purge.jsdelivr.net/gh/uplus-type/fontra-tutorials@latest/<file>`
 for each file (`plugin.json`, `init.js`, `panel.js`, `tour.js`, `icon.svg`,
-`tours/*.js`), or run `scripts/purge-jsdelivr.sh`; the GitHub Pages address follows `main` on every push, once
+`tours/*.js`), or run `scripts/purge-jsdelivr.sh`, which does it for both
+spellings of the owner (jsDelivr caches `Uplus-Type/…` and `uplus-type/…`
+separately); the GitHub Pages address follows `main` on every push, once
 Pages is enabled (*Settings › Pages › Source: GitHub Actions*;
 `.github/workflows/pages.yml`).
 
