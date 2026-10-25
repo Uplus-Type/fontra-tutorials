@@ -14,10 +14,16 @@ import { offerTour, setEditor } from "./tour.js";
 export function init(editor, pluginPath) {
   setEditor(editor);
   const panel = new TutorialsPanel(`${pluginPath}/icon.svg`);
-  editor.addSidebarPanel(panel, "right");
+  try {
+    editor.addSidebarPanel(panel, "right");
+  } catch (error) {
+    console.error("Fontra Tutorials: could not add the Tutorials panel.", error);
+    throw error;
+  }
   // Fontra looks the tab's tooltip up in its own translations: set it here.
   const tab = document.querySelector(`.sidebar-tab[data-sidebar-name="${PANEL_ID}"]`);
   if (tab) tab.title = "Tutorials";
+  console.info(`Fontra Tutorials loaded from ${pluginPath}: the Tutorials panel is in the right sidebar.`);
   // The welcome, once the editor is up; not again once done or skipped.
   offerTour("editor");
 }

@@ -26,8 +26,19 @@ gestures.
    and the tour of the editor is offered the first time.
 
 `owner/repo` addresses are served by jsDelivr from the repository's latest
-tagged release, so a new tag publishes a new version; the GitHub Pages
-address follows `main` on every push (`.github/workflows/pages.yml`).
+tagged release (`git tag v0.1.0 && git push --tags`), so a new tag publishes
+a new version; the GitHub Pages address follows `main` on every push, once
+Pages is enabled (*Settings › Pages › Source: GitHub Actions*;
+`.github/workflows/pages.yml`).
+
+The repository's own address (`github.com/…`) and `raw.githubusercontent.com`
+do not work: GitHub serves the scripts as plain text, which the browser
+refuses for a module, and Fontra prints *Module didn't load*. When the panel
+does not appear, the browser console says at which of the three steps
+Fontra stopped: *Plugin metadata not found* (the address), *Module didn't
+load* (a file, or its type), *Error occured when running (Fontra Tutorials)
+plugin* (this code; please report it with the trace). When all is well it
+prints *Fontra Tutorials loaded from …*.
 
 Fontra Pak and any Fontra server work the same way. Fontra loads plug-ins
 in the glyph editor only: a step that belongs to Font Info or the font
