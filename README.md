@@ -20,14 +20,17 @@ gestures.
 ## Adding it to Fontra
 
 1. In Fontra, open the Fontra menu › **Application settings** › **Plugins**.
-2. Add the address `Uplus-Type/fontra-tutorials`
-   (or `https://uplus-type.github.io/fontra-tutorials`).
+2. Add the address `uplus-type/fontra-tutorials` (owner in lower case: see below)
+   or `https://uplus-type.github.io/fontra-tutorials`.
 3. Reload the editor. A **Tutorials** panel appears in the right sidebar,
    and the tour of the editor is offered the first time.
 
 `owner/repo` addresses are served by jsDelivr from the repository's latest
 tagged release (`git tag v0.1.0 && git push --tags`), so a new tag publishes
-a new version; the GitHub Pages address follows `main` on every push, once
+a new version. jsDelivr caches its answer for `@latest` for up to a day, a
+failed one included: a spelling asked for before the first tag existed keeps
+failing until then, which is why the lower-case `uplus-type/…` is the one to
+use; the GitHub Pages address follows `main` on every push, once
 Pages is enabled (*Settings › Pages › Source: GitHub Actions*;
 `.github/workflows/pages.yml`).
 
