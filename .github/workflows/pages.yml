@@ -1,5 +1,5 @@
 # Publish the plug-in as static files on GitHub Pages, so that Fontra can
-# load it by address: https://fontra.github.io/fontra-tutorials
+# load it by address: https://uplus-type.github.io/fontra-tutorials
 # One-time setting: Settings › Pages › Source: GitHub Actions.
 name: Publish to GitHub Pages
 on:

@@ -20,8 +20,8 @@ gestures.
 ## Adding it to Fontra
 
 1. In Fontra, open the Fontra menu › **Application settings** › **Plugins**.
-2. Add the address `fontra/fontra-tutorials`
-   (or `https://fontra.github.io/fontra-tutorials`).
+2. Add the address `Uplus-Type/fontra-tutorials`
+   (or `https://uplus-type.github.io/fontra-tutorials`).
 3. Reload the editor. A **Tutorials** panel appears in the right sidebar,
    and the tour of the editor is offered the first time.
 
